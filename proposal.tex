@@ -1,0 +1,111 @@
+\documentclass[12pt, twoside]{report}
+
+\usepackage{graphics}
+\usepackage{times}
+\usepackage{amsmath}
+\usepackage[utf8]{inputenc}
+\usepackage[font=small,labelfont=bf,figurewithin=none]{caption}
+\usepackage{natbib}
+
+\usepackage{lipsum}
+
+\usepackage{color}
+\usepackage{hyperref}
+\definecolor{cadmiumgreen}{rgb}{0.0, 0.82, 0.24}
+\hypersetup{
+    pdftitle={Thesis Proposal -- Exoplanet detection in metal-poor stars},    % title
+    pdfauthor={Jo\~{a}o Faria},     % author
+    colorlinks=true,       % false: boxed links; true: colored links
+    linkcolor=red,          % color of internal links (change box color with linkbordercolor)
+    citecolor=cadmiumgreen,        % color of links to bibliography
+    filecolor=magenta,      % color of file links
+    urlcolor=cyan           % color of external links
+}
+\usepackage{titlesec}
+
+\usepackage{pdflscape}
+\usepackage{pgfgantt}
+
+%%%%%% chapter headings
+\definecolor{gray75}{gray}{0.75}
+\newcommand{\hsp}{\hspace{20pt}}
+\titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter~\textcolor{gray75}{$\vert$}~}{0pt}{\Huge\bfseries}
+
+
+%%%%%% figure captions with bigger margins
+\newcommand{\scaption}[1]{\newline\parbox{15cm}{\caption{\small#1}}}
+\newcommand{\sscaption}[1]{\newline\newline\parbox{23cm}{\caption{\small#1}}}
+
+
+\topmargin      0.0in
+\headheight     0.0in
+\headsep        0.0in
+\oddsidemargin  0.0in
+\evensidemargin 0.0in
+\textheight     9.0in
+\textwidth      6.5in
+
+
+\makeatletter
+\renewcommand*{\cleardoublepage}{\clearpage\if@twoside \ifodd\c@page\else
+\blankpage
+\thispagestyle{empty}
+\newpage
+\if@twocolumn\hbox{}\newpage\fi\fi\fi}
+\makeatother
+
+
+
+\begin{document}
+
+
+%% the titlepage
+\input{./title.tex}
+
+% \pagebreak
+% \thispagestyle{empty}
+% \phantom{a}
+% \pagebreak
+
+
+\pagestyle{plain}
+\pagenumbering{roman}
+
+
+\tableofcontents
+
+%\cleardoublepage
+\pagenumbering{arabic}
+
+
+%% Introduction
+\include{introduction}
+
+
+
+%% State of the Art
+\include{state-of-the-art}
+ 
+
+%% Research Objectives and Approach
+\include{objectives}
+
+
+%% Current Work and Preliminary Results
+\include{current-work}
+
+
+% %% Conclusions
+% \include{conclusions}
+
+
+\pagebreak
+
+\begin{footnotesize}
+\bibliographystyle{aa}
+\bibliography{proposal,/home/joao/phd/bib/everything}
+\end{footnotesize}
+
+\end{document}
+
+
