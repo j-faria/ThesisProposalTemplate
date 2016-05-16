@@ -1,5 +1,6 @@
 # ThesisProposalTemplate
 
+Deadline: 30th June 2016
 up to 25 pages!
 
 See examples in https://www.astro.up.pt/dms   `pda > reports`
